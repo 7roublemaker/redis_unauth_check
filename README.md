@@ -2,11 +2,11 @@
 redis unauthrize access check
 
 # env
-python 
+    python 
 # Needed module
-getopt 
-codecs
-colorama
+    getopt 
+    codecs
+    colorama
 
 # Usage
     python3 redis.py -r <target host>  
