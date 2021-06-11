@@ -136,11 +136,14 @@ if __name__ == "__main__":
             else: 
                 exp_redis_unauth(target) 
         exit() 
+    # multithreading (not implemented :D)
     elif len(target) < thread_num: 
         thread_num = len(target) 
-    vuln_redis = {} 
+    vuln_redis = {}  # save the vuln redis IP:Port
+    # handle multiple targets
     for t_target in target: 
         result = exp_redis_unauth(t_target) 
         if result is not False: 
             vuln_redis[t_target] = result
+    # write result to the file
     write_to_file(vuln_redis)
